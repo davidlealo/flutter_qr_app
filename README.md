@@ -102,5 +102,15 @@ Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para má
 
 ---
 
+## **Contacto**
+
+Si tienes preguntas, sugerencias o algún problema con el proyecto, no dudes en contactarme:
+
+- **Email:** [davidlealo@gmail.com](mailto:davidlealo@gmail.com)
+- **GitHub:** [https://github.com/davidlealo](https://github.com/davidlealo)
+- **LinkedIn:** [https://www.linkedin.com/in/davidlealo/](https://www.linkedin.com/in/davidlealo/)
+
+---
+
 ¡Gracias por usar esta aplicación! Si tienes preguntas o comentarios, no dudes en abrir un issue en este repositorio.
 
