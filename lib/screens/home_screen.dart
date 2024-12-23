@@ -10,6 +10,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
   QRViewController? controller;
   String scannedData = '';
+  final TextEditingController textController = TextEditingController();
 
   @override
   void dispose() {
@@ -30,6 +31,12 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  void _checkInputCode() {
+    if (textController.text == '123456') {
+      Navigator.pushNamed(context, '/some-page');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,8 +52,8 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: 200,
-                  width: 200,
+                  height: 250,
+                  width: 250,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.blue, width: 2),
                     borderRadius: BorderRadius.circular(12),
@@ -60,17 +67,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: TextField(
-                    onSubmitted: (value) {
-                      if (value == '123456') {
-                        Navigator.pushNamed(context, '/some-page');
-                      }
-                    },
+                    controller: textController,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Input número',
                     ),
                     keyboardType: TextInputType.number,
                   ),
+                ),
+                SizedBox(height: 10),
+                ElevatedButton(
+                  onPressed: _checkInputCode,
+                  child: Text('Validar código'),
                 ),
               ],
             ),
