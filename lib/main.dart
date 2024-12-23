@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
 import 'screens/qr_scanner_screen.dart';
+import 'screens/result_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomeScreen(),
         '/qr-scanner': (context) => QrScannerScreen(),
+        '/some-page': (context) => ResultScreen(scannedCode: '123456'), // Página de prueba
       },
     );
   }
